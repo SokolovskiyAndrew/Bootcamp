@@ -1,0 +1,9 @@
+<h2>My Blog</h2>
+<div class="list">
+  <ng-container *ngIf="blogList$ | async as blogList; else noData">
+    <app-blog-list-item *ngFor="let blog of blogList"></app-blog-list-item>
+  </ng-container>
+  <ng-template #noData>
+    <h3>There aren't any blog posts! Let's add new one!</h3>
+  </ng-template>
+</div>

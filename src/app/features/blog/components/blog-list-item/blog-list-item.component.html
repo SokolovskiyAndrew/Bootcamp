@@ -1,0 +1,23 @@
+<div class="item">
+  <div class="item__info">
+    <div class="item__header">
+      <div class="item__header_img">
+        <img [src]="" alt="Author image" />
+        <div class="item__header_info">
+          <p>{{ blogItem.author.firstName }} {{ blogItem.author.lastName }}</p>
+          <p>{{ blogItem.createdAt }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="item__body">
+      <h2>{{ blogItem.title }}</h2>
+      <p>{{ blogItem.description }}</p>
+    </div>
+    <div class="item__footer">
+      <a>Read More...</a>
+    </div>
+  </div>
+  <div class="item__counter">
+    <app-counter-with-icon [counter]="blogItem.likesCount"></app-counter-with-icon>
+  </div>
+</div>
